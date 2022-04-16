@@ -18,7 +18,7 @@
       @zoom-start="onZoomStart"
       @zoom-end="onZoomEnd"
     >
-      <div class="view-pdf">Having trouble viewing the invitation? <br/> <br/><a href="https://bit.ly/mico-and-grace" target="_blank">Click here to view the PDF.</a></div>
+      <!-- <div class="view-pdf">Having trouble viewing the invitation? <br/> <br/><a href="https://bit.ly/mico-and-grace" target="_blank">Click here to view the PDF.</a></div> -->
       <div class="action-bar">
         <left-icon
           class="btn left"
@@ -69,44 +69,20 @@ export default
     setPhotos: () ->
        # Simulate asynchronous pages initialization
       setTimeout (=>
-        vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-
-        if vw < 444
-          @pages = [
-            null
-            'images/1.jpg'
-            'images/2.jpg'
-            'images/3.jpg'
-            'images/7.jpg'
-            'images/4.jpg'
-          ]
-          @pagesHiRes = [
-            null
-            'images-large/1.jpg'
-            'images-large/2.jpg'
-            'images-large/3.jpg'
-            'images-large/7.jpg'
-            'images-large/4.jpg'
-          ]
-        else
-          @pages = [
-            null
-            'images/1.jpg'
-            'images/2.jpg'
-            'images/3.jpg'
-            'images/5.jpg'
-            'images/6.jpg'
-            'images/4.jpg'
-          ]
-          @pagesHiRes = [
-            null
-            'images-large/1.jpg'
-            'images-large/2.jpg'
-            'images-large/3.jpg'
-            'images-large/5.jpg'
-            'images-large/6.jpg'
-            'images-large/4.jpg'
-          ]
+        @pages = [
+          null
+          'images/1.jpg'
+          'images/2.jpg'
+          'images/3.jpg'
+          'images/4.jpg'
+        ]
+        @pagesHiRes = [
+          null
+          'images-large/1.jpg'
+          'images-large/2.jpg'
+          'images-large/3.jpg'
+          'images-large/4.jpg'
+        ]
       ),
     onFlipLeftStart: (page) -> console.log 'flip-left-start', page
     onFlipLeftEnd: (page) ->
@@ -172,7 +148,7 @@ a {
 
 .action-bar .btn {
   font-size: 30px;
-  color: #BAA88C;
+  color: #A8BD9D;
 }
 
 .action-bar .btn svg {
